@@ -17,12 +17,16 @@ public class TennisGame {
 
     public String getScore() {
         if (player1.getScore() > 0) {
-            return player1.getPlayerName() + " advantage";
+            return advantageMsg(player1);
         }
         else if(player2.getScore() > 0) {
-            return player2.getPlayerName() + " advantage";
+            return advantageMsg(player2);
         }
         return "LOVE all";
+    }
+
+    private String advantageMsg(Player player) {
+        return player.getPlayerName() + " advantage";
     }
 
     public void score(String playerName) {
