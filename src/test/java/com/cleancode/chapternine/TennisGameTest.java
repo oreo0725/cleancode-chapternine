@@ -9,6 +9,7 @@ import static org.assertj.core.api.Assertions.assertThat;
  * @since 2017/07/31
  */
 public class TennisGameTest {
+
     @Test
     public void test_getScore_WHEN_game_just_starts_THEN_player1Is0_and_player2Is0() throws Exception {
         // GIVEN
