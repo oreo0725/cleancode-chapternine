@@ -22,4 +22,17 @@ public class TennisGameTest {
 
     }
 
+    @Test
+    public void test_getScore_WHEN_p1Score1_p2Score0_THEN_game_result_p1_advantage() throws Exception {
+        // GIVEN
+        TennisGame game = new TennisGame("SuperMan", "BatMan");
+        game.score("SuperMan");
+        // WHEN
+        String result = game.getScore();
+
+        // THEN
+        assertThat(result).isEqualTo("SuperMan advantage");
+    }
+
+
 }
